@@ -2025,7 +2025,7 @@ public class DefaultMessageStore implements MessageStore {
         private boolean isSpaceToDelete() {
             cleanImmediately = false;
 
-            String commitLogStorePath = DefaultMessageStore.this.getMessageStoreConfig().getStorePathCommitLog();
+            String commitLogStorePath = DefaultMessageStore.this.getStorePathPhysic();
             String[] storePaths = commitLogStorePath.trim().split(MixAll.MULTI_PATH_SPLITTER);
             Set<String> fullStorePath = new HashSet<>();
             double minPhysicRatio = 100;
