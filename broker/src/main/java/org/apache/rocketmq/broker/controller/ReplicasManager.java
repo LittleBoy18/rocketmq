@@ -800,7 +800,7 @@ public class ReplicasManager {
                     }
                 });
             }
-        }catch (Throwable t){
+        } catch (final Throwable t) {
             LOGGER.error("scanAvailableControllerAddresses unexpected exception", t);
         }
     }
